@@ -300,6 +300,7 @@ h2:hover {
     text-align: left;
     position: absolute;
     margin-left: 5%;
+    padding-bottom: 40px;
     font-family: "Spectral", serif;
     font-weight: 400;
     font-style: normal;
@@ -327,6 +328,7 @@ h2:hover {
 .story {
     margin-left: 5px;
     margin-right: 5px;
+    padding-bottom: 40px;
     text-align: left;
     font-family: "Spectral", serif;
     font-weight: 400;
@@ -353,8 +355,10 @@ h2:hover {
 .chapter {
     margin-left: 5px;
     margin-right: 5px;
+    padding-bottom: 40px;
     text-align: left;
     font-family: "Spectral", serif;
     font-weight: 400;
     font-style: normal;
+    font-size: 15px;
 }
