@@ -1,0 +1,360 @@
+/* Made with the help/tutorials from the following sites (as well as some code):
+    https://www.w3schools.com/
+    https://developer.mozilla.org/en-US/
+*/
+
+body {
+    background-color: #050404;
+    transition: background-color 0.5s;
+}
+
+/* body::selection {
+    background-color: #893168;
+    color: #f2f3d9;
+} */
+
+footer {
+    background-color: #2e1c2b;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #f2f3d9;
+    text-align: center;
+    font-size: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+footer a {
+    color: #f2f3d9;
+    transition: 0.3s ease-in-out;
+}
+
+footer a:hover {
+    color: #893168;
+    opacity: 80%;
+    cursor: pointer;
+}
+
+footer a:active {
+    opacity: 90%;
+    filter: invert(0.8);
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color: #2e1c2b;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #893168;
+    display: block;
+    transition: 0.3s ease-in-out;
+}
+
+.sidenav a.active {
+    background-color: #f2f3d9;
+    color: #893168;
+}
+
+.sidenav a.active:hover {
+    color: #2e1c2b;
+}
+
+.sidenav a:hover {
+    color: #f2f3d9;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: rgba(0,0,0,0);
+    align-items: start;
+}
+
+.flex-container > div {
+    border-width: 2px; 
+    border-style: dashed;  
+    width: 50%;
+    margin: 10px;
+    padding: 1%;
+    opacity: 75%;
+    transition: 0.4s ease-in-out;
+}
+
+.flex-container > div:hover {
+    opacity: 100%;
+    filter: invert(1);
+    transform: scale(1.03,1.03);
+    transition-delay: 2s ease-in-out;
+}
+
+h1 {
+    padding-left: 40%;
+    text-align: center;
+    font-size: 30px;
+    transition: 0.2s ease-in-out;
+}
+
+h1:hover {
+    filter: drop-shadow(10px 16px 2px #0094c6);
+}
+
+h2 {
+    height: 40px;
+    margin-left: 25%;
+    margin-right: 25%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    border-style: double;
+    border-width: 5px;
+    border-color: #4a1942;
+    background-color: #f2f3d9;
+    color: #4a1942;
+    font-size: 30px;
+    transition: 0.4s ease-in-out;
+    animation: fadeIn 3s;
+}
+
+/* Written with the help of: 
+https://blog.hubspot.com/website/css-fade-in#text-transition */
+@keyframes fadeIn {
+    0% {
+        opacity: 0%;
+        background-color: #4a1942;
+        color: #f2f3d9;
+        border-style: dashed;
+        border-color: #f2f3d9;
+    }
+    100% {
+        opacity: 100%;
+        background-color: #f2f3d9;
+        color: #4a1942;
+        border-style: double;
+        border-color: #4a1942;
+    }
+}
+
+h2:hover {
+    opacity: 80%;
+    background-color: #4a1942;
+    color: #f2f3d9;
+    border-style: dashed;
+    border-color: #f2f3d9;
+    transform: scale(1.03,1.03);
+    filter: drop-shadow(10px 16px 5px #f2f3d9);
+    transition-delay: 2s ease-in-out;
+}
+
+.blinkingCursor {
+    display: inline;
+    animation: blinkCursor 0.50s infinite;
+}
+
+@keyframes blinkCursor {
+    0% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#sidebutton:hover {
+    color: #893168;
+    opacity: 80%;
+    filter: drop-shadow(0px 0px 5px #f2f3d9);
+    transform: scale(1.03,1.03);
+    transition-delay: 2s ease-in-out;
+}
+
+.firefly {
+    width: 5px;
+    height: 5px;
+    background-color: #FFBF00;
+    opacity: 90%;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 0 10px 10px rgb(233, 154, 16);
+    animation: fly 8s infinite ease-in-out;
+    animation-direction: alternate;
+    offset-path: ellipse(150px 50px at 50% 40px);
+    offset-distance: 10%;
+}
+
+@keyframes fly {
+    0% {
+        offset-distance: 0%;
+    }
+    100% {
+        offset-distance: 110%;
+    }
+}
+
+/* Got from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_image_grid */
+.row {
+    display: -ms-flexbox; /* IE 10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE 10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+    box-sizing: border-box;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+    -ms-flex: 50%; /* IE 10 */
+    flex: 50%;
+    padding: 0 4px;
+    box-sizing: border-box;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.75);
+    z-index: 20;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.closeButton {
+    position: fixed; 
+    top: 10px; 
+    right: 10px; 
+    display: none; 
+    font-size: 25px;  
+    z-index: 21;
+}
+
+.closeButton:hover {
+    cursor: pointer;
+    opacity: 75%;
+}
+
+#next {
+    display: inline;
+    position: fixed;
+    margin-left: 8px;
+    margin-top: 130px;
+    font-size: 25px;
+}
+
+#next:hover {
+    opacity: 75%;
+    cursor: pointer;
+}
+
+.imgrotation {
+    height: 50%;
+    margin-left: 50%;
+}
+
+.spectral-regular {
+    font-family: "Spectral", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poem {
+    text-align: left;
+    position: absolute;
+    margin-left: 5%;
+    font-family: "Spectral", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.linktopiece {
+    display: block;
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-decoration: none;
+    font-family: "Spectral", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #f2f3d9;
+    background-color: #4a1942;
+    transition: 0.4s ease-in-out;
+}
+
+.linktopiece:hover {
+    color: #893168;
+    background-color: #f2f3d9;
+}
+
+.story {
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: left;
+    font-family: "Spectral", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.sublink {
+    display: block;
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-decoration: none;
+    font-family: "Spectral", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #f2f3d9;
+    transition: 0.4s ease-in-out;
+}
+
+.sublink:hover {
+    color: #893168;
+}
+
+.chapter {
+    margin-left: 5px;
+    margin-right: 5px;
+    text-align: left;
+    font-family: "Spectral", serif;
+    font-weight: 400;
+    font-style: normal;
+}
