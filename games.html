@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="./general.css">
+        <link href='https://fonts.googleapis.com/css?family=Playwrite PE' rel='stylesheet'>
+        <script src="./general.js"></script>
+        <script src="https://kit.fontawesome.com/7d1e621309.js" crossorigin="anonymous"></script>
+    </head>
+    <body id="Games" style="background-color: #050404; color: #F2F3D9; font-family: 'Courier New', Courier, monospace;" onload=typeTitle()>
+        <div id="navbar" class="sidenav">
+            <a href="./index.html"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="./art.html"><i class="fa-solid fa-paintbrush"></i> Art</a>
+            <a href="#" class="active"><i class="fa-solid fa-gamepad"></i> Games</a>
+            <a href="./poetry.html"><i class="fa-solid fa-pen-nib"></i> Poetry</a>
+            <a href="./shortstories.html"><i class="fa-solid fa-pen-clip"></i> Short Stories</a>
+            <a href="./pendulum.html"><i><i class="fa-solid fa-book-skull"></i> Pendulum</i></a>
+        </div>
+        <div id="main">
+            <span id="0" style="font-size: 30px; cursor: pointer; display: inline;" onclick="opencloseNav()"><span id="sidebutton">&#10002;</span> <h1 style="display: inline;">unfurled</h1></span>
+            <div class="firefly"></div>
+            <div style="text-align: center;">
+            <p style="font-size: large;"><i>the fiber zipper drops, leaving my 
+                <span style="color: #AA1D0E; background-color: #F49390; font-weight: bolder;">flesh</span> 
+                cut open and bare for the morning birds to eat. </i></p>
+            </div>
+            <h2 style="text-align: center;"><span id="title"></span><div class="blinkingCursor">|</div></h2>
+            <h3 class="spectral-regular" style="text-align: center;"><b><i>Dulces Sueños</i>: The Game</b></h3>
+            <div class="row" onload=twoColumns()>
+                <div class="column">
+                    <img src="previewdulcesgame.png" style="width: 100%; border: #893168 dashed;">
+                    <p class="spectral-regular" style="text-align: center;">One of the frames from the game.</p>
+                </div>
+                <div class="column">
+                    <p class="spectral-regular">
+                        My game is a piece of interactive fiction based on a short story I wrote titled “Dulces Sueños.” The story metaphorically explores the point of view of young trans men of color who face subtle rejection from family members and are forced to accept a gender role that doesn’t align with their identities. The story emphasizes how this can feel suffocating, violent, and even confusing. Despite their families still caring for them, the love feels disingenuous and as if it is meant for someone who doesn’t really exist. The game introduces some choices that ultimately don’t affect the course of the story much but serve to amplify the feeling of helplessness.
+                    </p>
+                    <p class="spectral-regular">You can play the game <a id="sweetdreams" href="https://roshanis5.github.io/dulces-suenos/" target="_blank">here</a>.</p>
+                </div>
+            </div>
+            <p class="spectral-regular">
+                I started off with a short horror story that I wrote for the class GNSE 15002: Gender and Sexuality in World Civilizations I. It was a story that combined elements of prose, poetry, and illustrations. 
+                I knew that I wanted to adapt it into a game for my Media Arts and Design capstone project, so I started generating ideas from there. 
+                At the beginning of my creative process, I was looking to make a 3D game inspired by games like <i>Resident Evil 7: Biohazard</i> and <i>Until Dawn</i>. Here are some slides from my creative brief that indicate the direction that I was initially leaning towards.
+            </p>
+            <div class="row" onload="twoColumns()">
+                <div class="column">
+                    <img src="inspo1.png" style="width: 100%;">
+                    <img src="inspo3.png" style="width: 100%;">
+                </div>
+                <div class="column">
+                    <img src="inspo2.png" style="width: 100%;">
+                    <img src="inspo4.png" style="width: 100%;">
+                </div>
+            </div>
+            <p class="spectral-regular">
+                I went on to create a prototype in Twine to map out the choices and subsequent branches of the narrative. 
+                I tested it out with two young trans men who matched most of what I was looking for in a target audience. 
+                Below are images of what the prototype looked like on Twine.
+            </p>
+            <div class="row" onload="twoColumns()">
+                <div class="column">
+                    <img src="twine1.png" style="width: 100%;">
+                </div>
+                <div class="column">
+                    <img src="twine2.png" style="width: 100%;">
+                </div>
+            </div>
+            <p class="spectral-regular">
+                After pitching my idea to a panel, I realized that another option I had was to make a more 2D game. People on the panel were more intrigued by my 2D art style 
+                and thought the story would lose some of its charm if I made it into a 3D game. So, I made a 3D scene in Unity representing the kitchen where much of the story takes place 
+                and then drew this same scene digitally. Then, I showed these scenes one after the other to one of the trans men and to my capstone advisor. The feedback I received seemed to 
+                indicate that the 2D scene matched more of my story's intended vibe. That was when I decided to pivot to a web-based piece of interactive fiction with 2D drawings. Below are the 3D and 2D versions of 
+                the same scene side by side. 
+            </p>
+            <div class="row" onload="twoColumns()">
+                <div class="column">
+                    <img src="3dscene.png" style="width: 100%;">
+                </div>
+                <div class="column">
+                    <img src="kitchen.png" style="width: 100%;">
+                </div>
+            </div>
+            <p class="spectral-regular">
+                I spent the rest of my time drawing and coding in HTML, CSS, and JavaScript. I received some help with technical issues from my capstone advisor. 
+                Below is a video of me playing through the game. 
+            </p>
+            <iframe width="100%" src="https://youtu.be/P3bdpUjJU_w?si=RwNzu6EYXr3ed43O"></iframe>
+            <footer>
+                <a href="https://www.instagram.com/roshanishrestha5/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/RoshaniS5" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a href="https://roshanis.itch.io/" target="_blank"><i class="fa-brands fa-itch-io"></i></a>
+                <!-- <a href="https://www.redbubble.com/people/zanyzombicorn/shop?anchor=profile&asc=u" target="_blank"><img src="./redbubble_icon.png" width="5px"></a> -->
+                <a href="https://www.linkedin.com/in/roshani-shrestha-2ba99b1b1/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:roshanishrestha983@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+            </footer>
+        </div>
+    </body>
+</html>

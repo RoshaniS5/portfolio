@@ -139,6 +139,15 @@ h2 {
     animation: fadeIn 3s;
 }
 
+#sweetdreams {
+    text-decoration: none;
+    color: #893168;
+}
+
+#sweetdreams:hover {
+    color: #f2f3d9
+}
+
 /* Written with the help of: 
 https://blog.hubspot.com/website/css-fade-in#text-transition */
 @keyframes fadeIn {
