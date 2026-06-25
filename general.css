@@ -307,6 +307,7 @@ h2:hover {
 
 .poem {
 	text-align: left;
+	position: relative;
 	margin-left: 5%;
 	margin-right: 5%;
 	padding-bottom: 40px;
