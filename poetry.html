@@ -1,62 +1,480 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="./general.css">
-        <link href='https://fonts.googleapis.com/css?family=Playwrite PE' rel='stylesheet'>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Playwrite+HR+Lijeva:wght@100..400&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-        <script src="./general.js"></script>
-        <script src="https://kit.fontawesome.com/7d1e621309.js" crossorigin="anonymous"></script>
-    </head>
-    <body id="Poetry" style="background-color: #050404; color: #F2F3D9; font-family: 'Courier New', Courier, monospace;" onload=typeTitle()>
-        <div id="navbar" class="sidenav">
-            <a href="./index.html"><i class="fa-solid fa-house"></i> Home</a>
-            <a href="./art.html"><i class="fa-solid fa-paintbrush"></i> Art</a>
-            <a href="./games.html"><i class="fa-solid fa-gamepad"></i> Games</a>
-            <a href="#" class="active"><i class="fa-solid fa-pen-nib"></i> Poetry</a>
-            <a href="./shortstories.html"><i class="fa-solid fa-pen-clip"></i> Short Stories</a>
-            <a href="./pendulum.html"><i><i class="fa-solid fa-book-skull"></i> Pendulum</i></a>
-        </div>
-        <div id="main">
-            <span id="0" style="font-size: 30px; cursor: pointer; display: inline;" onclick="opencloseNav()"><span id="sidebutton">&#10002;</span> <h1 style="display: inline;">unfurled</h1></span>
-            <div class="firefly"></div>
-            <div style="text-align: center;">
-            <p style="font-size: large;"><i>the fiber zipper drops, leaving my 
-                <span style="color: #AA1D0E; background-color: #F49390; font-weight: bolder;">flesh</span> 
-                cut open and bare for the morning birds to eat. </i></p>
-            </div>
-            <h2 style="text-align: center;"><span id="title"></span><div class="blinkingCursor">|</div></h2>
-            <!-- Links to each poem: -->
-            <a href="#O'Hare" class="linktopiece">O'Hare, after shredding myself apart</a><br><br>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="./general.css">
+		<link href='https://fonts.googleapis.com/css?family=Playwrite PE' rel='stylesheet'>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Playwrite+HR+Lijeva:wght@100..400&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+		<script src="./general.js"></script>
+		<script src="https://kit.fontawesome.com/7d1e621309.js" crossorigin="anonymous"></script>
+	</head>
+	<body id="Poetry" style="background-color: #050404; color: #F2F3D9; font-family: 'Courier New', Courier, monospace;" onload=typeTitle()>
+		<div id="navbar" class="sidenav">
+			<a href="./index.html"><i class="fa-solid fa-house"></i> Home</a>
+			<a href="./art.html"><i class="fa-solid fa-paintbrush"></i> Art</a>
+			<a href="./games.html"><i class="fa-solid fa-gamepad"></i> Games</a>
+			<a href="#" class="active"><i class="fa-solid fa-pen-nib"></i> Poetry</a>
+			<a href="./shortstories.html"><i class="fa-solid fa-pen-clip"></i> Short Stories</a>
+			<a href="./pendulum.html"><i><i class="fa-solid fa-book-skull"></i> Pendulum</i></a>
+		</div>
+		<div id="main">
+			<span id="0" style="font-size: 30px; cursor: pointer; display: inline;" onclick="opencloseNav()"><span id="sidebutton">&#10002;</span> <h1 style="display: inline;">unfurled</h1></span>
+			<div class="firefly"></div>
+			<div style="text-align: center;">
+			<p style="font-size: large;"><i>the fiber zipper drops, leaving my 
+				<span style="color: #AA1D0E; background-color: #F49390; font-weight: bolder;">flesh</span> 
+				cut open and bare for the morning birds to eat. </i></p>
+			</div>
+			<h2 style="text-align: center;"><span id="title"></span><div class="blinkingCursor">|</div></h2>
+			<!-- Links to each poem: -->
+			<a href="#O'Hare" class="linktopiece">O'Hare, after shredding myself apart</a>
+			<a href="#windowed" class="linktopiece">wi(n)dowed</a>
+			<a href="#bleeds" class="linktopiece">Bleeds Into Mine</a>
+			<a href="#mustard" class="linktopiece">Mustard Yellow</a>
+			<a href="#learned" class="linktopiece">learned to love...</a>
+			<a href="#trying" class="linktopiece">trying to make sense of it</a>
+			<a href="#chamomile" class="linktopiece">chamomile tea in the chill of chicago</a>
+			<a href="#eyes" class="linktopiece">if I could see myself through your eyes</a>
+			<a href="#projection" class="linktopiece">Projection</a>
+			<a href="#looking" class="linktopiece">IF YOU’RE LOOKING</a>
+			<a href="#hollow" class="linktopiece">hollow</a>
+			<br><br>
 
-            <span class="poem">
-            <h3 id="O'Hare">O’Hare, after shredding myself apart</h3>
-            Autumn doesn’t last forever.<br>
-            The sun eventually sets earlier than it should<br>
-            and the trees become bare in their endeavor<br>
-            to shred themselves apart for another year as you’d<br>
-            watch and expect it, even, nodding your head: <i>This is right.</i> The sun is setting now.<br>
-            I am at that estuary of autumn & winter, day & night.<br>
-            It’s dusk, wading in the crook of a brow—<br>
-            feeling the edge of the twilight.<br><br>
+			<pre class="poem">
+<h3 id="O'Hare">O’Hare, after shredding myself apart</h3>
+Autumn doesn’t last forever.
+The sun eventually sets earlier than it should
+and the trees become bare in their endeavor
+to shred themselves apart for another year as you’d
+watch and expect it, even, nodding your head: <i>This is right.</i> The sun is setting now.
+I am at that estuary of autumn & winter, day & night.
+It’s dusk, wading in the crook of a brow—
+feeling the edge of the twilight.
 
-            Sometimes I dream about nights with the sun caught in a haze<br>
-            like a fire throbbing beneath its smoke.<br>
-            Those dreams are always the strangest, when the glaze<br>
-            of hope colors the gray with a glow like yolk.<br>
-            My teeth ache in front of lavender shoes,<br>
-            and hiding beneath the caramel & chocolate yarn is a green & red bruise.<br><br>
-            </span>
-            <footer>
-                <a href="https://www.instagram.com/roshanishrestha5/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://github.com/RoshaniS5" target="_blank"><i class="fa-brands fa-github"></i></a>
-                <a href="https://roshanis.itch.io/" target="_blank"><i class="fa-brands fa-itch-io"></i></a>
-                <!-- <a href="https://www.redbubble.com/people/zanyzombicorn/shop?anchor=profile&asc=u" target="_blank"><img src="./redbubble_icon.png" width="5px"></a> -->
-                <a href="https://www.linkedin.com/in/roshani-shrestha-2ba99b1b1/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="mailto:roshanishrestha983@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
-            </footer>
-        </div>
-    </body>
+Sometimes I dream about nights with the sun caught in a haze
+like a fire throbbing beneath its smoke.
+Those dreams are always the strangest, when the glaze
+of hope colors the gray with a glow like yolk.
+My teeth ache in front of lavender shoes,
+and hiding beneath the caramel & chocolate yarn is a green & red bruise.
+			</pre>
+
+			<pre class="poem">
+<h3 id="windowed">wi(n)dowed</h3>
+Black widows birthed on toilet seats
+and bathroom sinks, little kids,
+adolescents at the local middle school,
+gunpowder wishes (<i>I’m just kidding, I’m just kidding,
+washing my hands,
+rinse and repeat</i>),
+questioned ties,
+my father’s kisses
+cutting the thread over my eyes(,)
+I used to cut
+my mother’s hugs
+like raw chicken in the kitchen sink,
+my brother leaning close to the railing by the lake
+skinned by the intruder
+    	<i>one push and he’d be dead</i>
+(<i>I’m just kidding,
+DON’T TOUCH HIM,
+I’m just kidding,
+washing my hands,
+rinse and repeat
+just to know I would never</i>),
+s(k)in colored words,
+the tension beneath my skin—indirect passage of words,
+a sneaking suspicion of a dream,
+and strangers beneath their dresses,
+
+groped by the idea of hurt emanating from my fingertips,
+I linger in past footsteps, silent killers in the sand,
+to be sure I kept my hands to myself and my thoughts
+pure while my mouth reeks of sanctimonious bullshit.
+Widowed by the venom of what could’ve happened
+had I taken one step closer.
+Do I believe it’s in my blood now?
+And when you say “<i>I know what you did</i>,” 
+
+can you see through my windows?
+			</pre>
+
+			<pre class="poem">
+<h3 id="bleeds">Bleeds Into Mine</h3>
+Biking down the street, his expression bleeds into mine.
+His eyes are sharp—drill a depression that bleeds into mine.
+
+Faintly humming to deathly crimson, glowed eyes like wine
+Skin picks apart—thoughts turn to digression—bleeds into mine.
+
+Light to dark, like a blackout—it must not be fine.
+Some kind of spiraling obsession bleeds into mine.
+
+Dark to light, blinking rapidly—it must be a sign.
+Some kind of impulsive delusion/decision bleeds into mine.
+
+I walk like a wood table with a jagged scarred line.
+Would you ask me how this suppression bleeds into mine?
+
+Tracing a path along my mood, waving like a sine
+graphs a distance—watch as the skin/question bleeds (into mine).
+
+Near Millennium. septum pierced. flirting? please define
+being (feeling?) liked before this illusion bleeds into mine.
+
+Can’t play sports because I guess I’m crooked like my spine.
+Scoliosis, trans. Their aggression/oppression bleeds into mine,
+
+waters me down as I seek to make myself align
+with worn/torn fantasy: chest compression bleeds into mine.
+
+You would expect with a name of light that I would shine
+but instead—the opposite impression bleeds into mine.
+			</pre>
+
+			<pre class="poem">
+<h3 id="mustard">Mustard Yellow</h3>
+I rise from the pillow, the case a skin mustard yellow.
+I must’ve been dreaming in mustard yellow.
+
+I was a toddler when <i>Baba</i> first kicked <i>Mamá</i>
+when I learned to meander in mustard yellow.
+
+New York is lined with food carts: a hot dog with
+ketchup and a not-so-thin mustard yellow.
+
+Lavender, honey, plum, canary (fly), I-
+ris(ked) blond midnight butterscotched within mustard yellow.
+
+I know I haven’t been drinking enough water 
+because the rivers of pee grin mustard yellow.
+
+The same old vers -es -us, discordant.
+“She/her,” he said (in) mustard yellow.
+
+He supports me, but I’m not a boy in his eyes, lips
+or brain. So where am I? Chagrin, mustard yellow.
+
+“Mummy,” as I wrote in kindergarten, cooks
+rice, potatoes, leaves of mustard, yellow
+
+turmeric in the air and the walls sticky
+with the tattoos of what’s been: mustard yellow.
+
+Needle: stitch, guacamole: green, water: clear
+morning: <i>why did I wake up</i>, Google: Sergey Brin, mustard: yellow
+
+clipped wings, thick sigh, laughter, Baba’s smile, whisper
+(“)I love you,(”) after what I’ve seen—<i>what a sin</i>—mustard yellow.
+
+Shame on you: you’ve just now realized that all
+of your dreams are coated in mustard yellow.
+			</pre>
+
+			<pre class="poem">
+<h3 id="learned">learned to love...</h3>
+I’ve abandoned my calculator in my desk drawer
+like logic. I always come back home with sticky flan fingers dipped in loyalty,
+and love, laughter in the foreground. Background: chai, chamomile tea, coffee.
+I step foot into Queens, inhale tacos and garbage, avoid suspicious puddles, and crash into her.
+
+Like in that physics midterm, I’ve come to recognize doom as a burning murmur
+in the back room…I was made to love you. You became my whole personality.
+“I saw you when you were born.” Rip my legs apart. Hand him a dead girl I could never be.
+Sometimes shrimp cocktail flies on the floor before a slammed door
+
+and I (July 28, 2022)—<i>the thought that has the loudest voice is “kill yourself.”
+…Everything would be better without me</i>—looked at the window (sixth floor), wished I could
+But all there was…a loud bang as I drove my fist into a metal bystander.
+The door echoed its dull moan, came apart to flatline lips, furrowed brows, his voice on a shelf.
+He can do that while <i>I wish everything was over</i> and would he cry or just wield a fork if I would?
+
+But all there is: cling to cigarette smoke-stained smiles even if I can’t stand (how you treat) her.
+			</pre>
+
+			<pre class="poem">
+<h3 id="trying">trying to make sense of it</h3>
+But all there is: cling to cigarette smoke-stained smiles even if I can’t stand (how you treat) her.
+Your deep laugh and scratchy blue-tinted stubble now dotted with white rings in my ears
+like a sunset, a Jarritos ending too soon, another
+midnight bleeding into 3 AM, or clinging to the fantasy of New Year’s
+even if the magic of staying up late and watching the ball drop has long faded.
+The way you used pick me up and carry me before you went to work
+and I’d look forward to being too high to remember what I hated.
+Looking down at the floor, I’d forget the broken plates and get lost in a euphoric murk.
+
+I focus on the lights: <i>give me distance</i>
+as my mom wipes her eyes and nose with toilet paper, her bruises
+shades and hues of viole(n)t that blare “feel my existence.”
+
+The few times that this happens, my mouth refuses
+to speak.						I’m relieved when you start to laugh again. 
+You’re feeding your tetras or cooking a sauce for jhol momos, and I’m grasping for the mundane.
+			</pre>
+
+			<pre class="poem">
+<h3 id="chamomile">chamomile tea in the chill of chicago</h3>
+<i>to my friend who once said of the drink, “It’s like peppermint without the kick.” </i>
+
+like in silky smooth writing, I can tell you secrets:
+		my parents; genuine smiles; the way my dad panicked into acceptance; how the snow 
+		melts at my feet; cigarettes—lit, inhaled, stepped on—enticing me; the creepy elevator 
+		woman from my nightmare…
+& watch you laugh; give me the occasional stern look; make the white walls less sterile—
+more dirty, more real. 
+over the phone they gave me at Ingalls, your voice tipped up the corners of my mouth—
+made me feel close to the sun.
+if I were a child again, I could pass my fingers through the hospital window and reach the dust 
+suspended & glittering in the afternoon light that would drape my family’s apartment floor. 
+press my toes to the warmed, gold-speckled wood to feel…
+
+unlike Icarus, my wax wings did not melt—
+I was cross-legged on a cloud, my fingertips pink 
+from golden rays and the perfectly microwaved red mug steaming beneath my touch.
+I could imagine myself above the water—crystal & blue from the sky, not dark & murky
+like when it would paint in liquid black right before my eyes and make my lungs heavy.
+I hated the sound of my own voice, but these coils were the only things connecting us,
+and the only times I felt close to warmth in that place was when I heard yours: 
+“orgo lab,” “Cathey,” “the chicken,” “<i>marker</i>”—a collection of words and inside jokes,
+fragments of that week in October. mostly, it was the familiar timbre of your voice that kept me,
+sitting on that hard plastic chair in my gown and yellow grippy socks,
+sane and grounded. 
+your lullaby from hyde park to harvey, minty fresh against my ear.
+			</pre>
+
+			<pre class="poem">
+<h3 id="eyes">if I could see myself through your eyes</h3>
+<i>to [redacted]</i>
+
+Lake Michigan lies between our two lying land masses—
+a body of water between two bodies of flesh & bone & too many feelings all at once.
+Water waves & sound waves coalesce across miles:
+		<i>If you could see yourself through my eyes…</i>
+
+I have a hard time letting what you say ripple into me.
+So, I take it and fold it into an origami butterfly. 
+At least I can avoid looking at it while admiring its beauty.
+The tone of your voice—it must have some meaning for it to throb within my (rib)cage. 
+There’s always someone trying to reach me and make me live past thirty, 
+but their voices always feel so distant. So many paper animals scattered across my desk.
+
+I trace the folds and wonder whether I should open it.
+It’s taken so long for me to unravel this wire of childhood trauma around my insides,
+and insecurity wrapped around my neck, that <i>kissable neck</i> as you called it, and I reach you,
+and your sleepy smile as I tiptoe across that highwire. 
+
+		<i>Look at me.</i>
+
+I can’t. I can’t watch you look at me because all I see reflected in your piercing eyes
+is what has been brewing inside of me for years, what is folded in my desk drawer:
+		It starts off, in some dull blue ballpoint ink on college-ruled looseleaf,
+				<u>THINGS I HATE ABOUT MYSELF</u>
+		When I wrote it, I was desperate and I wanted to remind myself, remind <i>everyone</i>,
+		why they couldn’t love me.
+
+		<i>Lower your arms.</i>
+
+I look up with the most reluctant, pained expression on my face.
+Your gaze traces my fingertips and that gentle voice settles into the pit of my stomach,
+not like stones this time but like a fleet of actual butterflies, 
+fluttering as your eyelashes do sometimes.
+		<i>This time it’s not unrequited</i>, I tell myself, wanting so badly to believe it.
+You guide me through the unfolding and slowly everything is laid out and stilled: 
+how you want to teach me to look into your eyes and see past the reflection.
+
+And part of me thinks it’s bullshit.
+It’s only been a bit less than two weeks.
+It took three weeks of texting and a chai meetup for Brandon to reject me…
+and then ghost me after I asked to be friends. That part hurt the most,
+because I like to say that <i>losing a friend is worse than losing a lover</i>. 
+But I was never really mad at him. Maybe he just didn’t know what to say. 
+Because I never do. I couldn’t even really look at him at Chiya Chai that day—
+what made me think that I(t) was tolerable (<i>looking at me, I’m so fucking ugly</i>)?
+I guess I was naive enough to think that I didn’t fuck everything up on that day it drizzled
+and some guy harassed me afterward in the men’s restroom of Millenium Station.
+And I think, 
+		<i>Sometimes things get better before they get worse, 
+		and the star twinkles one last time before it explodes.</i>
+
+You feel like a ghost sometimes, an apparition that I made up in my mind to cope.
+Sometimes when I’m walking and the biting wind hits me, I ask if you’re real.
+
+It’s a question that, to a normal person, would have a strictly defined answer.
+<i>Cogito, ergo sum. I think, therefore I am.</i> Some Descartes shit like that.
+To me, all my memories feel blurred and you start to feel like a Schrödinger’s cat,
+simultaneously both alive and dead, real and fake,
+a thought experiment that shows the absurdity and paradoxical nature of my mind:
+		<i>I need to open the box to know.
+		But, Pandora’s box? Will the cat die from my eyes? Will misery be unleashed?</i>
+
+Are you real? 
+It’s a question that has no answer for me, but I’m willing to open the box to find out.
+Call me Pandora, tell me that curiosity kills the cat. But sometimes, this is all you can do.
+And this is all I know:
+
+		When we’re staring at each other through the glass screen, 
+		your eyelashes make a mess out of me—
+		tangle me into something I can’t define.
+		And that’s when I recognize that you are real
+		because I can see the mirror breaking.
+
+		The cracks ripple across the surface like constellations or creases all laid out
+		and the stars keep twinkling and I keep laughing, all giddy & stupid & 
+		stuck in the way you call me love.
+			</pre>
+
+			<pre class="poem">
+<h3 id="projection">Projection</h3>
+I sit and watch the late-night cartoons in your eyes,
+flickering across the television when my dad sits to eat dinner 
+after coming home from work at
+2 am.
+
+Like him, you walk in, the door clicking open so
+easily because you have the key
+and I let you in like I’m supposed to and
+suddenly, I’m above the ground in your arms
+before you leave again.
+We kissed before you hopped on the Greyhound,
+right on the lips.
+I didn’t want you to go
+so I sat on my bed and moped after.
+
+The deadlock is broken: I know it’s worn from (t)rust.
+And I wore you (down), draped across my torso like a vest
+as I ran my hands through your hair in the middle of the night,
+letting you forget your nightmares.
+
+And you ran your hands through mine,
+ready to rid me of my fears.
+
+Memories burst forth from the projector, flickering across my eyes,
+even as I try to cover them.
+This fascist attempt at censorship never works.
+Yet, you are not here to watch them with me
+		and I am not sure you ever will be again.
+			</pre>
+
+			<pre class="poem">
+<h3 id="looking">IF YOU’RE LOOKING</h3>
+Fine, I'll tell you.
+Dropping my voice to a whisper, I’ll say,
+		“Examine the wads of toilet paper 
+		that swirl down the bowl and
+		force yourself to witness the blood 
+		trails made from wiping too hard,
+
+		from caring too much.
+
+		Look at the flakes 
+		of skin fluttering hastily to the floor as I pick my fingers,
+		leaving the flesh beneath tender, exposed, and vulnerable.
+
+		Check out the soap suds 
+		accumulating in the bathroom 
+		sink—the iridescent bubbles shimmering as the water drip drip </pre>
+<pre class="poem" style="text-align: right;">(<i>it never ceases, just one after the other beneath my skin</i>)</pre>
+<pre class="poem">
+		drips.
+
+		Stare at the black cat I
+		rendered on the top of your bass 
+		with the paints your grandmother gifted you.
+</pre>
+<pre class="poem" style="text-align: right;">
+(<i>does that shy little feline sink its teeth into your back?</i>)
+(<i>do its eyes run down your spine?</i>)
+(<i>I hope so</i>)
+(<i>I hope so</i>)</pre>
+
+<pre class="poem">
+		Tilt your head at the cornflower blue pullover you left
+		for me last April, always draped
+		over the back of my chair
+</pre>
+<pre class="poem" style="text-align: right;">
+<i>Savannah on the chest,
+Georgia right below it</i></pre>
+<pre class="poem">
+		I don’t know what to say to my mother anymore when she mentions my <i>amigo</i>,
+		so I lie as if I still talk to you (because no, </pre>
+	<pre class="poem" style="text-align: right;"><i>you didn’t move into your friends’ home in Georgia, yet,</i> did you?)</pre>
+
+<pre class="poem">
+		Sift through the letters
+		I wrote, every half-cursive stroke intentional,
+		written in some crazy color like 
+		purple or pink.
+
+		Listen to the wind that strokes your windows,
+		whistling, <i>please let me in</i>, </pre>
+<pre class="poem" style="text-align: right;">
+<i>frantic voicemails left behind
+like sawdust</i>.</pre>
+	
+<pre class="poem">
+		Reach into your hair, pull at the threads of your fingers, 
+		find the young girl who tried to rob the Dollar General, 
+		fake your smile until it hurts, hide the time between your bones,
+		stir the pot until it whispers, form the shapes of our words with your lips and tongue
+		but stop yourself because it’s just not the same, trace the hairs beneath your belly button,
+		feel the rope between your eyes and watch it snap, press the elevator button
+		over and over and over again in futility to make everything rush back faster, 
+		write like it’s 9:43 PM on a Monday and you’re supposed to be 
+		working on a paper that’s due in about two hours, search every place we’ve ever been to,
+		interlock our pinkies and mean it, touch every spot on your skin and walk along the path
+		we’ve made, wrestle with the future but never let it go, breathe, love yourself
+		because in these places I linger,” 
+just in case you're wondering where I am. Just in case you care.
+			</pre>
+
+			<pre class="poem">
+<h3 id="hollow">hollow</h3>
+I have a fear—I will be inside of his mouth
+and mine will be a mill for teeth,
+My eyes will adjust to the darkness, a galaxy of static parting ways to eyes rimmed
+with red: <i>spirals stretched across roses 
+covered with ravenous spiders</i>,
+
+I wait for the lamb to emerge from between my breasts,
+to tear apart my navy blue tank top and bloody my half unbuttoned flannel—
+to <i>leave</i>—but instead, I feel its meat fall off the bone as it gets seared with clove,
+
+He tilts my head back up and I
+am stumbling 
+on his tongue again,,, 
+
+I will be left with only a shard of a cashew, and 
+the moon will pull the tide away from my yearning feet,
+Someone will reach into the gills of a trout and his fingers will penetrate the pink 
+flesh. The fish’s pucker will be torn apart by the air, a gasp trapped in time:
+<i>the leaves were once golden before they shriveled up and turned brittle</i>,
+
+Help will not arrive.
+
+He’ll open the door and a nest will have fallen,
+the twigs twisting into a clump, and when I reach 
+down to wipe, it will look like my period has returned,
+
+On my bed, the blankets are tangled 
+bodies atop a pink sea of sheets,
+I tiptoe around the suction, snaking my toes into purple grass,
+The sheets still smell like him, like minty cigarettes or the nauseating air freshener 
+in my friend’s car after our fifth grade graduation or marijuana, 
+like how he didn’t stop even when I told him it hurt
+and the taste still lingers in my breath like that’s all I’ll ever deserve,
+			</pre>
+
+			<footer>
+				<a href="https://www.instagram.com/roshanishrestha5/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+				<a href="https://github.com/RoshaniS5" target="_blank"><i class="fa-brands fa-github"></i></a>
+				<a href="https://roshanis.itch.io/" target="_blank"><i class="fa-brands fa-itch-io"></i></a>
+				<!-- <a href="https://www.redbubble.com/people/zanyzombicorn/shop?anchor=profile&asc=u" target="_blank"><img src="./redbubble_icon.png" width="5px"></a> -->
+				<a href="https://www.linkedin.com/in/roshani-shrestha-2ba99b1b1/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+				<a href="mailto:roshanishrestha983@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i></a>
+			</footer>
+		</div>
+	</body>
 </html>
